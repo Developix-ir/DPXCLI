@@ -30,19 +30,22 @@ static void show_transfer(char* departure, char* secret, char* destination, char
             json_object *transaction = json_tokener_parse(json_object_get_string(json_object_object_get(result_json, "result")));
 
             fprintf(stdout,
-                "\033[36m\033[1mTransfered successfully\033[0m\033[0m\n\n"
-                "\033[36m\033[1mTransactionID:\033[0m %s\033[0m\n"
-                "\033[36m\033[1mDeparture:    \033[0m %s\033[0m\n"
-                "\033[36m\033[1mDestination:  \033[0m %s\033[0m\n"
-                "\033[36m\033[1mAmount:       \033[0m %s\033[0m\n"
-                "\033[36m\033[1mFee:          \033[0m %s\033[0m\n"
-                "\033[36m\033[1mTimestamp:    \033[0m %s\033[0m\n",
-                json_object_get_string(json_object_object_get(transaction, "transaction")),
-                json_object_get_string(json_object_object_get(transaction, "departure")),
-                json_object_get_string(json_object_object_get(transaction, "destination")),
-                json_object_get_string(json_object_object_get(transaction, "amount")),
-                json_object_get_string(json_object_object_get(transaction, "fee")),
-                json_object_get_string(json_object_object_get(transaction, "timestamp"))
+                "╔═════════════════════════════════════════════════╗\n"
+                "║ \033[36m\033[1mTransaction Successful                          \033[0m\033[0m║\n"
+                "║                                                 ║\n"
+                "║ \033[36m\033[1mTransactionID:\033[0m %s\033[0m ║\n"
+                "║ \033[36m\033[1mDeparture:    \033[0m %s\033[0m ║\n"
+                "║ \033[36m\033[1mDestination:  \033[0m %s\033[0m ║\n"
+                "║ \033[36m\033[1mAmount:       \033[0m %s\033[0m ║\n"
+                "║ \033[36m\033[1mFee:          \033[0m %s\033[0m ║\n"
+                "║ \033[36m\033[1mTimestamp:    \033[0m %s\033[0m ║\n"
+                "╚═════════════════════════════════════════════════╝\n",
+                pad_string(json_object_get_string(json_object_object_get(transaction, "transaction")), 32),
+                pad_string(json_object_get_string(json_object_object_get(transaction, "departure")), 32),
+                pad_string(json_object_get_string(json_object_object_get(transaction, "destination")), 32),
+                pad_string(json_object_get_string(json_object_object_get(transaction, "amount")), 32),
+                pad_string(json_object_get_string(json_object_object_get(transaction, "fee")), 32),
+                pad_string(json_object_get_string(json_object_object_get(transaction, "timestamp")), 32)
             );
 
         }else{

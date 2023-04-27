@@ -51,6 +51,7 @@ int main(int argc, char *argv[]) {
             {"destination", required_argument, NULL, 'd'},
             {"id",          required_argument, NULL, 'i'},
             {"offset",      required_argument, NULL, 'o'},
+            {"amount",      required_argument, NULL, 'a'},
             {NULL, 0, NULL, 0}
         };
 

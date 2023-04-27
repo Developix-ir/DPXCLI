@@ -39,7 +39,7 @@ $ dpxcli transactions -o 64 -w DEPARTURE -d DESTINATION // filter transactions t
 Description: retrieves information of the given transaction id  
 Usage: `dpxcli transaction -i|--id <transactionId>`
 ```text
-$ dpxcli transaction --id TRXID
+$ dpxcli transaction --id transactionId
 ```
 
 ### 💠 Revoke

@@ -75,7 +75,7 @@ No instructions yet, though you are more than welcome to use Cygwin and compile 
 Development library files of libcurl (e.g. `libcurl4-openssl-dev` or `libcurl4-gnutls-dev`) are needed for `curl/curl.h`, also the json-c library (e.g. `libjson-c-dev`) is needed for `json-c/json.h`, and that's all.
 
 ## ⚡ DPX API Documentation
-Soon
+You can read the [documentation of the DPX API here](https://github.com/Developix-ir/DPXCLI/blob/master/DPXAPI.md).
 
 ## ✅ TODO
 - [ ] Commentify the code for better readability  

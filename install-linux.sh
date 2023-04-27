@@ -15,7 +15,7 @@ if [[ $(id -u) -ne 0 ]]; then
 else
    
     rm -f /usr/bin/dpxcli
-    cp dpxcli /usr/bin/dpxcli
+    mv dpxcli /usr/bin/dpxcli
     echo "Installed successfully"
 
 fi

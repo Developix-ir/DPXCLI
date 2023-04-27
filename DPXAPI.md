@@ -12,25 +12,24 @@ Generally speaking, the API accepts `GET` or `POST` http methods based on the ac
 ## ✨ Methods
 
 ### 💠 Balance
-Description: Retrieves the balance of the given wallet  
-Path: `/balance`  
-Supported Methods: `GET`  
-Return: `Balance (Float)`  
-Fields: `/balance/{wallet}`  
+**Description:** Retrieves the balance of the given wallet  
+**Path:** `/balance`  
+**Supported Methods:** `GET`  
+**Return:** `Balance (Float)`  
+**Params:** `/balance/{wallet}`  
 
 ### 💠 Transaction
-Description: Retrieves the information of the given TransactionID  
-Path: `/transaction`  
-Supported Methods: `GET`  
-Return: `Transaction Object`  
-Fields: `/transaction/{transactionId}`  
+**Description:** Retrieves the information of the given TransactionID  
+**Path:** `/transaction`  
+**Supported Methods:** `GET`  
+**Return:** `Transaction Object`  
+**Params:** `/transaction/{transactionId}`  
 
 ### 💠 Transactions
-Description: Retrieves the transactions with given criteria (maximum of 256 items)  
-Path: `/transactions`  
-Supported Methods: `GET`, `POST`  
-Return: `Array of Transaction Objects`  
-Fields:  
+**Description:** Retrieves the transactions with given criteria (maximum of 256 items)  
+**Path:** `/transactions`  
+**Supported Methods:** `GET`, `POST`  
+**Return:** `Array of Transaction Objects`  
 | Field       | Type   | Required | Description                      |
 |-------------|--------|----------|----------------------------------|
 | offset      | int    | Optional | Specifies the offset             |
@@ -38,11 +37,10 @@ Fields:
 | destination | string | Optional | Specifies the destination wallet |
 
 ### 💠 Transfer
-Description: Transfers the specified amount from departure wallet to destination wallet   
-Path: `/transfer`  
-Supported Methods: `POST`  
-Return: `Transaction Object`  
-Fields:  
+**Description:** Transfers the specified amount from departure wallet to destination wallet   
+**Path:** `/transfer`  
+**Supported Methods:** `POST`  
+**Return:** `Transaction Object`  
 | Field       | Type   | Required | Description                                  |
 |-------------|--------|----------|----------------------------------------------|
 | amount      | float  | Required | Specifies the amount                         |
@@ -51,22 +49,20 @@ Fields:
 | destination | string | Required | Specifies the destination wallet             |
 
 ### 💠 Verify
-Description: Verifies if the given credentials are valid and transfer can be done with given credentials   
-Path: `/verify`  
-Supported Methods: `POST`  
-Return: `Validity (Boolean)`  
-Fields:  
+**Description:** Verifies if the given credentials are valid and transfer can be done with given credentials   
+**Path:** `/verify`  
+**Supported Methods:** `POST`  
+**Return:** `Validity (Boolean)`  
 | Field       | Type   | Required | Description                        |
 |-------------|--------|----------|------------------------------------|
 | wallet      | string | Required | Specifies the wallet               |
 | secret      | string | Required | Specifies the secret of the wallet |
 
 ### 💠 Revoke
-Description: Revokes the secret of the given wallet   
-Path: `/revoke`  
-Supported Methods: `POST`  
-Return: `New Secret (String)`  
-Fields:  
+**Description:** Revokes the secret of the given wallet   
+**Path:** `/revoke`  
+**Supported Methods:** `POST`  
+**Return:** `New Secret (String)`  
 | Field       | Type   | Required | Description                        |
 |-------------|--------|----------|------------------------------------|
 | wallet      | string | Required | Specifies the wallet               |
@@ -75,7 +71,7 @@ Fields:
 ## 🧩 Object Types
 
 ### 💠 Transaction Object
-Description: Table below describes a `transaction object`  
+**Description:** Table below describes a `transaction object`  
 | Field       | Type   | Description                          |
 |-------------|--------|--------------------------------------|
 | transaction | string | Specifies the transaction id         |

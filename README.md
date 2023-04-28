@@ -82,6 +82,9 @@ You can read the [documentation of the DPX API here](https://github.com/Developi
 - [ ] Create a MakeFile for build systems  
 - [ ] Github actions build & test pipeline  
 
+## 🐍 Python DPXCLI
+There is a very nice replica of this project that is made using python, with a better readability for the ones that are interested. [You can see it in this repository.](https://github.com/SIR-X/DPXCLI-PY)
+
 ## 🖊️ Contribution
 Your contribution to dpxcli development is very welcome!
 
